@@ -1,0 +1,19 @@
+<body>
+    11111
+    <script>
+        // @ts-ignore
+      if (typeof test == "undefined") {
+        const script = document.createElement("script");
+        script.src =
+          "test.js";
+        document.body.appendChild(script);
+        // script.onload = init;
+        script.onload = (e) => {
+          console.log("onload",test);
+        };
+      } else {
+        console.log(test)
+        // init();
+      }
+    </script>
+</body>
